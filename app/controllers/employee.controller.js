@@ -49,11 +49,11 @@ module.exports.add = async (req, res) => {
       this.code = employeeData.code;
     }
     // Set employee model data
-    employeeModel.code = this.code;
-    employeeModel.name = employeeData.name;
-    employeeModel.phone = employeeData.phone;
-    employeeModel.email = employeeData.email;
-    employeeModel.sex = employeeData.sex;
+    employeeModel.code   = this.code;
+    employeeModel.name   = employeeData.name;
+    employeeModel.phone  = employeeData.phone;
+    employeeModel.email  = employeeData.email;
+    employeeModel.sex    = employeeData.sex;
     employeeModel.avatar = Buffer.from(employeeData.avatar, "base64");
 
     // Create a new employee record

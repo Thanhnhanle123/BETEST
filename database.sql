@@ -16,7 +16,7 @@ CREATE TABLE Departments (
     name TEXT NOT NULL
 );
 
-CREATE TABLE DepartmentEmployee (
+CREATE TABLE DepartmentEmployees (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     department_id INTEGER NOT NULL,
     employee_id INTEGER NOT NULL,

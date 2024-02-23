@@ -1,6 +1,6 @@
 const { DataTypes } = require("sequelize");
-const sequelize = require(__path_configs + "database"); // File cấu hình kết nối
-const bcrypt = require('bcryptjs');
+const sequelize = require(__path_configs + "database"); // Make sure this path is correct
+const DepartmentEmployee = require('./departmentEmployee.model');
 
 const Employee = sequelize.define(
   "Employee",
@@ -38,8 +38,10 @@ const Employee = sequelize.define(
     }
   },
   {
-    timestamps: false, // Tắt tự động tạo createdAt và updatedAt
+    timestamps: false, // Turn off auto timestamps
   }
 );
+
+Employee.hasMany(DepartmentEmployee, { foreignKey: 'employeeId' });
 
 module.exports = Employee;
